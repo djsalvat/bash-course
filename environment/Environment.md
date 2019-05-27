@@ -16,11 +16,11 @@ Many commands and programs check the values of different environment variables, 
 
 Doing a
 ```bash
-THAT_WHICH_ROCKS=CENPA
+AWESOME_PERSON=ME
 ```
 only makes the variable availabie within your current instance of bash.
 ```bash
-export THAT_WHICH_ROCKS=CENPA
+export AWESOME_PERSON=ME
 ```
 makes the variable available to shell scripts and other programs executed within the shell, or in subshells, for you alone.
 
@@ -32,14 +32,14 @@ env | less
 To do define a variable globally (for all users), you must edit the configuration file /etc/profile.
 This requires administrative privileges. Unless you are an actual system administrator, you probably shouldn't do this.
 
-A simple example is the $PS1 variable. This variable tells bash the format of your prompt -- you can tweak this and make it pretty, with colors!
-
-Try this!
+A simple example is the $PS1 variable. This variable tells bash the format of your prompt -- you can tweak this and make it pretty. Try this:
+```
 export '[\u@\h:\w \d \t]\$ '
-
-With colors! The syntax for changing font colors in bash is awful -- this is the kind of thing you google, and copy and paste what you want.
+```
+We The syntax for changing font colors in bash is awful -- this is the kind of thing you google, and copy and paste what you want. Try this:
+```
 export '[\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[\033[01;31m\]\d \t\[\033[00m\]]\$ '
-
+```
 See [here](http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html) for some more discussion
 
 A more serious example is the $PATH variable. When you type a command, bash has to check whether that command exists,

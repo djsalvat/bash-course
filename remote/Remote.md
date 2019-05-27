@@ -1,17 +1,17 @@
 Functional knowledge of the command line makes interacting with remote computers that much easier.
 One can use remote desktop programs, but often times this is not possible or practical.
-For a given remote machine (I'll be using muon.npl.washington.edu), and user (dknotts),
+For a given remote machine (I'll be using somehost.domain), and user (dknotts),
 we can use ssh -- "secure shell", which provides you, the user, an encrypted terminal on that remote machine.
 We connect via
 ```bash
-ssh dknotts@muon.npl.washington.edu
+ssh dknotts@somehost.domain
 ```
 
 And now your prompt (whatever $PS1 is set to on the remote machine) will tell you that you are connected remotely.
 If you quit this terminal (e.g. $ exit), you will disconnect from the remote machine and return to the terminal from which you executed the "ssh" command.
 Alternatively, you can send individual commands to the remote machine, by providing the command(s) as an argument:
 ```bash
-ssh dknotts@muon.npl.washington.edu 'echo AAAAAAAAUUUUUUUUUUUUUUUUUUUGH'
+ssh dknotts@somehost.domain 'echo AAAAAAAAUUUUUUUUUUUUUUUUUUUGH'
 ```
 This will connect to the remote machine and yell on it.
 
@@ -20,29 +20,29 @@ This flag configures the connection so that remote X windows will be displayed o
 
 In practice, most users want to connect to a remote server on a regular basis. To make this more convenient, one can use aliases, or set this host and/or username as environment variables in .bashrc such as
 ```
-export MUONHOST=muon.npl.washington.edu
-export MUONUSER=dknotts
+export SOMEHOST=somehost.domain
+export SOMEUSER=dknotts
 ```
-A nice consequence being that you can tab-complete the variable names MUONHOST and MUONUSER. Then, connecting would connect with
+A nice consequence being that you can tab-complete the variable names SOMEHOST and SOMEUSER. Then, connecting would connect with
 ```bash
-ssh $MUONUSER@$MUONHOST
+ssh $SOMEUSER@$SOMEHOST
 ```
 
 Better still, we can leverage the power of configuration files. SSH can be configured for you, the individual user,
 by adding this username and host to ~/.ssh/config (creating the config file if it doesn't exist).
 We would add to this file the following:
 ```
-Host muon
-    HostName muon.npl.washington.edu
+Host somehost 
+    HostName somehost.domain
     User salvat
     ForwardX11 yes
 ```
-Here, each line consists of a configuration parameter followed by the value we want to set. Here I have decided to nickname my remote machine to be "muon".
+Here, each line consists of a configuration parameter followed by the value we want to set. Here I have decided to nickname my remote machine to be "somehost".
 The indented lines are to specify that the following options pertain to this host in particular.
 The "ForwardX11" option is equivalent to setting -X, as discussed above.
 Then we can
 ```bash
-ssh muon
+ssh somehost 
 ```
 
 Now, if we want to make our local machine aware of this host for all users, this is where our knowledge of the layout of linux is useful.
@@ -77,16 +77,16 @@ Alternatively, you can provide a password. Then, any machine to which you give t
 Once you have generated this key, you must copy it to your home directory on $HOST.
 Many modern machines come equipped with a command to do this for you, with relative safety and ease:
 ```bash
-ssh-copy-id dknotts@muon.npl.washington.edu
+ssh-copy-id dknotts@somehost.domain
 ```
 or if we've configured things nicely as above,
 ```bash
-ssh-copy-id muon
+ssh-copy-id somehost 
 ```
 
 Now, if the command ssh-copy-id is not available, we can copy the key ourselves. There's a lot to unpack about this statement:
 ```bash
-cat ~/.ssh/id_rsa.pub | ssh muon 'mkdir -p ~/.ssh && cat >> .ssh/authorized_keys && echo "Key copied"'
+cat ~/.ssh/id_rsa.pub | ssh somehost 'mkdir -p ~/.ssh && cat >> .ssh/authorized_keys && echo "Key copied"'
 ```
 
 Finally, we'll mention rsync. It provides a fast means of copying data.
