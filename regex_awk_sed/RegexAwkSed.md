@@ -220,7 +220,7 @@ The most important feature is that it lets you access each field by its column n
 Column 1 is referenced by $1, column 2 by $2, and so on.
 An example will clarify.
 
-Let's take the inverse of the problem we encountered in the "advanced_tricks" folder.
+Let's take the inverse of the problem we encountered in the [[AdvancedTricks]] lesson.
 Let's say we want to _separate_ two columns of data (time, voltage) into two files.
 
 ```bash

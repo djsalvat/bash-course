@@ -7,7 +7,7 @@ echo "auuuuuuuuuuuuuuuuuuugh."
 ```
 if you just want to yell.
 
-## Contents
+### Contents
 
 * [[Environment]]
 * [[System]]
@@ -15,5 +15,5 @@ if you just want to yell.
 * [[Aliases]]
 * [[Tarballs]]
 * [[Remote]]
-* [[RegexAwkSed]]
 * [[AdvancedTricks]]
+* [[RegexAwkSed]]

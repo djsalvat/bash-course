@@ -37,5 +37,5 @@ unalias <NAME>
 ```
 
 Note:
-* they only live as long as your terminal instance. For them to persist, put them in .bashrc. See the 'environment' folder.
+* they only live as long as your terminal instance. For them to persist, put them in .bashrc. See the [[Environment]] lesson.
 * Aliases don't work in shell scripts. Type out the full commands in the script instead.
