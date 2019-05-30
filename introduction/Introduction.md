@@ -18,7 +18,7 @@ The next day, your advisor, who annoyingly has their own means of analysing thes
 provides to you with two text files: the first is a file with a single line containing
 30000 time measurements separated by commas. For example, "0.0, 0.2, 0.4, 0.6, 0.8, " and so on.
 The second file is, unsurprisingly, a file with one line of voltage measurements
-at times that are collated with the other file. How do you proceed?
+at times that are collated with the other file. How do you proceed?  
 * Do you read the source code for the analysis provided by your fellow student, and modify
   it to read your advisor's data?
 * Do you write some custom program in your preferred programming language to convert the formats?
