@@ -226,8 +226,6 @@ Let's say we want to _separate_ two columns of data (time, voltage) into two fil
 
 ```bash
 awk '{print $1}' < voltage_vs_time.txt > times.txt
-```
-```bash
 awk '{print $2}' < voltage_vs_time.txt > voltages.txt
 ```
 We have "print", which is an awk command, and we grab only one column at a time from voltages_vs_time.txt,
