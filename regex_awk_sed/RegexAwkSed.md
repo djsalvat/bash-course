@@ -116,7 +116,7 @@ grep  '\(pea\|wal\)nut' < royal_decree.txt
 
 # sed
 
-Now, we are quite familiar withoutputting and searching the contents of a file, or searching the result of a command which
+Now, we are quite familiar with outputting and searching the contents of a file, or searching the result of a command which
 is sent to stdout. There are tools at are disposal to not only search, but also to edit files and streams.
 Perhaps the most general is the sed command (stream editor). One can write scripts in text files, and in fact do some very
 sophisticated and multi-faceted manipulations. We saw this earlier -- "sedtris" was in fact written in sed.
