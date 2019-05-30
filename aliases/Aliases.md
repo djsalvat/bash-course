@@ -1,4 +1,4 @@
-Aliases are instructions to bash to replace text with other text prior to executing the command. Aliases are defined like
+Aliases are instructions to bash to replace text with other text prior to executing the command. For example:
 
 ```bash
 alias NAME=STRING
@@ -37,5 +37,6 @@ unalias <NAME>
 ```
 
 Note:
+
 * they only live as long as your terminal instance. For them to persist, put them in .bashrc. See the [[Environment]] lesson.
 * Aliases don't work in shell scripts. Type out the full commands in the script instead.
