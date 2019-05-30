@@ -25,6 +25,7 @@ at times that are collated with the other file. How do you proceed?
 * Do you write some custom program in your preferred programming language to convert the formats?
 * Do you import into Excel and find some means of reconciling the formats?
 * Do you drop out of graduate school and start a podcast?
+
 Here we will learn that none of the above options are preferred, except perhaps for the last one.
 Indeed, if we are given these two files which are named, say, `times.txt` and `voltages.txt`, three commands solves the problem:
 ```bash
