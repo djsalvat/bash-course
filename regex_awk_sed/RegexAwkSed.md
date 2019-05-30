@@ -109,7 +109,8 @@ This is where the grouping characters come in:
 grep  '\(pea\|wal\)nut' < royal_decree.txt
 ```
 
-Pop quiz:
+**Pop quiz:**
+
 * How might you search for the king's phone number, but not other numbers?
 * How might you grep your processes to see if your browser is running, not knowing whether it's firefox, safari, or chrome?
 
