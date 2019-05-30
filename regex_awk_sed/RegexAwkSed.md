@@ -76,10 +76,10 @@ Now, what if we want to match a "null" character in addition to the lower or upp
 characters be matched. In this case, we want to match 0 or 1 of the characters in question, in order to match things like
 "ears" and "pears". to match 0 or 1 characters, we use the sequence "\?".
 
-Side note: yes, it's not just a question mark, but an escaped question mark.
+*Side note: yes, it's not just a question mark, but an escaped question mark.
 This is annoying to me, as some programs that use regex demand that some metacharacters are escaped, while others are not.
 On the one hand, it can be difficult to remember; on the other, it is easy to just try both versions of what you want and see which one
-is obviously correct. Also, many common programs that leverage regex have good "cheat sheets" online (such as grep, sed, vim, etc...).
+is obviously correct. Also, many common programs that leverage regex have good "cheat sheets" online (such as grep, sed, vim, etc...).*
 
 Now, back to where we were. If we want to match 0 or 1 characters, we use the "\?" like
 ```bash
