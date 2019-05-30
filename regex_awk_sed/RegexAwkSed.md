@@ -26,7 +26,7 @@ Typically, searches and operations for unix commands are performed on a line-by-
 In such expressions, some characters are *special* -- they are "metacharacters" which are not literally interpreted
 and searched for. Instead they are used to instruct the command (say grep) how to search. For example,
 the beginning of a line is represented by ^, and the end of a line by $. If you do want to literally search
-for these characters, you can escape them with \^ and \$ (and the \ itself is escaped with \\. Yes, this gets tricky).
+for these characters, you can escape them with \^ and \\$ (and the \ itself is escaped with \\. Yes, this gets tricky).
 
 An example might help. In this folder we have a royal decree. Let's find all instances of lines that contain the letter "I":
 ```bash
