@@ -230,13 +230,8 @@ awk '{print $1}' < voltage_vs_time.txt > times.txt
 ```bash
 awk '{print $2}' < voltage_vs_time.txt > voltages.txt
 ```
-
 We have "print", which is an awk command, and we grab only one column at a time from voltages_vs_time.txt,
 and put it into new files times.txt and voltages.txt.
 
------------------------------------------------------------------------------
-
-A good tutorial for many unix topics, but in particular awk, sed, and regular expressions:
-http://www.grymoire.com/Unix/
-
+A good tutorial for many unix topics, but in particular awk, sed, and regular expressions, can be found [here](http://www.grymoire.com/Unix/).
 In particular I learned a great deal about sed from that site.
