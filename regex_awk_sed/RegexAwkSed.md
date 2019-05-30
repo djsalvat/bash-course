@@ -6,9 +6,9 @@ you'll see that it refers to the search term as a PATTERN.
 
 # grep
 
-And that's the whole point -- grep (and many other unix commands) match text that
-agrees with a certain *logical pattern*. We have been using trivial versions of these patterns.
-For example, when we use grep to see if firefox is running
+The term "pattern" has a special meaning -- grep (and many other unix commands) match text that
+agrees with a certain *logical pattern*, and not just verbatim text.
+We have been using trivial versions of these patterns. For example, when we use grep to see if firefox is running
 
 ```bash
 ps aux | grep firefox
