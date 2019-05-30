@@ -9,7 +9,7 @@ Much of the power of the command line revolves around efficiently interacting wi
 on your computer, and facilitating the advanced manipulation of streams of data and text.
 Consider the following examples.
 
-*Example 1:* Another graduate student in your group gives you an analysis script or program which reads a text file
+**Example 1:** Another graduate student in your group gives you an analysis script or program which reads a text file
 containing a collated list of voltages versus time: that is to say, a text file
 with each row being a time followed by a space character, followed by a voltage.
 Perhaps this is a measurement of the amplitude of an oscillator,
@@ -32,19 +32,18 @@ Indeed, if we are given these two files which are named, say, `times.txt` and `v
 sed -i 's/, /\n/g' times.txt
 sed -i 's/, /\n/g' voltages.txt 
 paste -d' ' times.txt voltages.txt > time_vs_voltage.txt
-
 ```
 This will leave you with a single text file conforming to the format required by the original script.
 If this does not look like gibberish to you, then you probably do not need to continue with this walkthrough.
 
-*Example 2*: Example for replacing filenames? or perhaps changing in-place some formatting error?
+**Example 2**: Example for replacing filenames? or perhaps changing in-place some formatting error?
 
-*Example 3:* The IT administrator at your university sends you a nasty e-mail complaining that your
+**Example 3:** The IT administrator at your university sends you a nasty e-mail complaining that your
 linux machine or virtual environment is taking up too much disk space on the server.
 You are obliged to reduce your disk space, but as far as you can recall, you have no large files.
 Moreover, your home directory contains many folders within folders.
 
-*Example 4:* Some example for automation/crontabs/repeated command entries/customization?
+**Example 4:** Some example for automation/crontabs/repeated command entries/customization?
 
 # Let's start
 
