@@ -48,7 +48,7 @@ Moreover, your home directory contains many folders within folders.
 # Let's start
 
 I must take as a given that you have arrived at a command line on sme sort of linux, BSD, or OSX-like environment.
-Upon opening such a terminal, you are given a `prompt` at which you can input a command and press <Enter> to execute that command.
+Upon opening such a terminal, you are given a *prompt* at which you can input a command and press <Enter> to execute that command.
 Moreover, you are, at any given time, executing said command within a given folder on your computer.
 As a default, this is typically the `home` directory for your username.
 For example, if you open a terminal whose default is indeed your `home` user directory and invoke:
