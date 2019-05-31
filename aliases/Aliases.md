@@ -1,5 +1,4 @@
 Aliases are instructions to bash to replace text with other text prior to executing the command. For example:
-
 ```bash
 alias NAME=STRING
 ```

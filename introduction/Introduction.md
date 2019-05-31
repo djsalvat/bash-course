@@ -36,23 +36,41 @@ paste -d' ' times.txt voltages.txt > time_vs_voltage.txt
 This will leave you with a single text file conforming to the format required by the original script.
 If this does not look like gibberish to you, then you probably do not need to continue with this walkthrough.
 
-**Example 2**: Example for replacing filenames? or perhaps changing in-place some formatting error?
-
-**Example 3:** The IT administrator at your university sends you a nasty e-mail complaining that your
+**Example 2:** The IT administrator at your university sends you a nasty e-mail complaining that your
 linux machine or virtual environment is taking up too much disk space on the server.
 You are obliged to reduce your disk space, but as far as you can recall, you have no large files.
 Moreover, your home directory contains many folders within folders.
-
-**Example 4:** Some example for automation/crontabs/repeated command entries/customization?
+You want to solve the problem by finding any file larger than, say, 100MB. This is simple:
+```bash
+find ~/ -size +100M
+```
 
 # Let's start
 
+### Getting around
 I must take as a given that you have arrived at a command line on sme sort of linux, BSD, or OSX-like environment.
 Upon opening such a terminal, you are given a *prompt* at which you can input a command and press <Enter> to execute that command.
-Moreover, you are, at any given time, executing said command within a given folder on your computer.
+Within this prompt you are, at any given time, executing said command within a given folder on your computer.
 As a default, this is typically the `home` directory for your username.
 For example, if you open a terminal whose default is indeed your home user directory and invoke:
 ```bash
 ls
 ```
 it will provide you with a list of the contents of this directory.
+When issuing a command that prints information back to the terminal,
+we say that that the command prints to "standard out", or `stdout`.
+This is a stream of data that, unless we chose to direct somewhere,
+will ultimately print to our screen. There is similarly an input stream `stdin`.
+
+We will want to be able to change directories. Let's make a new directory and move into it:
+```bash
+mkdir new_directory
+mv new_directory
+```
+If you issue the `ls` command once more, you will notice that it returns nothing. Indeed, our new folder is empty.
+
+### Using standard input and output
+
+As they say, in linux *"everything is a file"*. Devices, logs, information, settings,
+are generally represented by or stored in files that you can interact with at the command line.
+
