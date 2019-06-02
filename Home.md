@@ -1,13 +1,12 @@
 #A bash course
 
-Navigate to the different folders and check the README files therein.
+Individual lessons can be found in the folders herein.
 
 In general, commands to be typed into the terminal are in fixed-width font.
-For example, you can do
+For example, if I want you to just yell, you do:
 ```bash
 echo "auuuuuuuuuuuuuuuuuuugh."
 ```
-if you just want to yell.
 
 ### Contents
 
@@ -15,7 +14,7 @@ if you just want to yell.
 * [[Environment]]
 * [[System]]
 * [[Processes]]
-* [[Aliases]]
+* [[CustomizationAndConvenience]]
 * [[Tarballs]]
 * [[Remote]]
 * [[AdvancedTricks]]
