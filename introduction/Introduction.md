@@ -73,4 +73,69 @@ If you issue the `ls` command once more, you will notice that it returns nothing
 
 As they say, in linux *"everything is a file"*. Devices, logs, information, settings,
 are generally represented by or stored in files that you can interact with at the command line.
+For example, for those using linux, you can find information
+about your computer's processor in the file `/proc/cpuinfo`.
+For those using another operating system, I have provided an example cpuinfo file in `introduction/cpuinfo`.
+We can print the contents of a file to `stdout` using the `cat` command:
+```bash
+cat /proc/cpuinfo
+```
+Now, the `cat` command is short for "concatenate", and it is intended to be used to, unsurprisingly,
+concatenate multiple files and send them to `stdout`. Here we use it trivially for one file.
 
+Displaying a file in this way is a bit annoying if the file has many lines. Luckily there is the `less`
+command, which acts as a reader that allows us to scroll.
+```bash
+less /proc/cpuinfo
+```
+You can press `q` to quit and return to the command line.
+
+Now, here is the core of this lesson. The `less` command can also accept a stream of text from `stdin`.
+What if, for example, we have a folder with many files, and issuing `ls` gives us a long list
+of files and folders we wish to page through using `less`?
+We need a means of taking the information sent to `stdout`, and directing it to `stdin` for `less` to use.
+You might say we need to "pipe" the `ls` command into `less`.
+This, in point of fact, what a *pipe* does. Let's see it in action:
+```bash
+ls | less
+```
+This does exactly what we need -- the output of `ls` is directed to the input of `less`.
+Pipes are an extremely important component of command line mastery, and we will employ them often here.
+
+Further, what if we want to send  stdout into a file? This can be done with a *redirect* using the `>` character.
+We can save the output of the `ls` command to a file:
+```bash
+ls > a_list_of_files.txt
+```
+Similarly, one can draw a file's contents into stdin via `<`.
+
+It is important at this point to note that redirects must be used with the utmost care:
+**a redirect to an existing file will overwrite the contents of that file** --
+a process known as *clobbering*. This behavior can be changed by customizing your bash environment.
+Instead of just writing to a file, we can also append to a file with `>>`.
+
+### Flags
+
+Commands often have optional configuration that can be changed by issuing *flags*.
+Typically these are in the form of additional characters or key words prefixed with dashes
+after the command itself. For example, try:
+```bash
+ls -lart
+```
+What does that do?
+
+### Help you help yourself
+
+Suppose you want to learn the answer to the previous question,
+and learn what other potentially useful flags the `ls` command has.
+Built in commands and many other common commands have manuals, or *man pages*.
+The `man` command will find and display the manual for such a command:
+```bash
+man ls
+```
+
+The behavior and customization of commands, as well as discussion of best command line practice,
+is discussed at length on websites such as [stack overflow](http://stackoverflow.com).
+It pays to habitually read man pages and perform internet searches to ask questions.
+BASH, for example, has been around for about thirty years, and the answers to a great majority of questions
+that you have can be readily found.
