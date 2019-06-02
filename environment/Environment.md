@@ -103,6 +103,6 @@ sedtris.sh
 ```
 
 Now, if you close your terminal and try running sedtris again, it will fail.
-We can make this change persist if we add it to our hidden file .bashrc, which is invoked each time we open a terminal.
+We can make this change persist if we add it to `.bashrc`.
 
 [More reading](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html)

@@ -1,3 +1,5 @@
+### Aliases
+
 Aliases are instructions to bash to replace text with other text prior to executing the command. For example:
 ```bash
 alias NAME=STRING
@@ -15,15 +17,16 @@ alias dowant='sudo yum list'
 alias canhaz='sudo yum install'
 ```
 
-Get rid of the pesky root splash screen by default
+For those that use ROOT, we can get rid of the pesky root splash screen by default
 ```bash
 alias root='root -l'
 ```
 
-Search for commands in your history by making up your own "hgrep" command
+You can search for commands in your history by making up your own "hgrep" command
 ```bash
 alias hgrep='history | grep'
 ```
+See the [[RegexAwkSed]] lesson for more details. 
 
 You can list all of the aliases currently defined in your environment with
 ```bash
@@ -35,7 +38,6 @@ You can get rid of an alias with
 unalias <NAME>
 ```
 
-Note:
+### Shell scripting
 
-* they only live as long as your terminal instance. For them to persist, put them in .bashrc. See the [[Environment]] lesson.
-* Aliases don't work in shell scripts. Type out the full commands in the script instead.
+### The .bashrc file
