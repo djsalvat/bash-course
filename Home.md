@@ -11,10 +11,10 @@ echo "auuuuuuuuuuuuuuuuuuugh."
 ### Contents
 
 * [[Introduction]]
+* [[CustomizationAndConvenience]]
 * [[Environment]]
 * [[System]]
 * [[Processes]]
-* [[CustomizationAndConvenience]]
 * [[Tarballs]]
 * [[Remote]]
 * [[AdvancedTricks]]
