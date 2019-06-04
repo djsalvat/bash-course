@@ -42,7 +42,7 @@ unalias <NAME>
 
 What happens if you close your terminal and open a new one?
 You will find that the aliases you have defined are now lost.
-In general, defining an alias (or declaring [[EnvironmentVariables]])
+In general, defining an alias (or declaring [[environment_variables/EnvironmentVariables]])
 only lasts for the duration of the current shell.
 We can, however, make these definitions declared automatically
 each time we open a new shell. Upon opening a shell, bash looks
