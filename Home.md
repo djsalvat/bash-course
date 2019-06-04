@@ -19,3 +19,4 @@ echo "auuuuuuuuuuuuuuuuuuugh."
 * [[Remote]]
 * [[AdvancedTricks]]
 * [[RegexAwkSed]]
+* [[JobSubmission]]
