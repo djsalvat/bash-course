@@ -32,12 +32,12 @@ This requires administrative privileges. Unless you are an actual system adminis
 A simple example of a useful environment variable is the PS1 variable.
 When you open a new terminal, bash checks this PS1 variable to determine how your prompt should be formatted. Try this:
 ```bash
-export '[\u@\h:\w \d \t]\$ '
+PS1='[\u@\h:\w \d \t]\$ '
 ```
 We can get even fancier with colors. the syntax for changing font colors in bash is awful
 -- this is the kind of thing you google, and copy and paste what you want. Try this:
 ```bash
-export '[\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[\033[01;31m\]\d \t\[\033[00m\]]\$ '
+PS1='[\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[\033[01;31m\]\d \t\[\033[00m\]]\$ '
 ```
 See [here](http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html) for some more discussion about customization.
 
