@@ -62,10 +62,10 @@ we say that that the command prints to "standard out", or `stdout`.
 This is a stream of data that, unless we chose to direct somewhere,
 will ultimately print to our screen. There is similarly an input stream `stdin`.
 
-We will want to be able to change directories. Let's make a new directory and move into it:
+We will want to be able to change directories. Let's make a new directory and move into it (or "change directory"):
 ```bash
 mkdir new_directory
-mv new_directory
+cd new_directory
 ```
 If you issue the `ls` command once more, you will notice that it returns nothing. Indeed, our new folder is empty.
 
