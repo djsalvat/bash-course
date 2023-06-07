@@ -1,12 +1,15 @@
 #!/bin/bash
-#PBS -l nodes=1:ppn=4 
-#PBS -l walltime=00:01:00
-#PBS -N yell
-#PBS -q debug
-#PBS -V
+#SBATCH -J yell_parallel 
+#SBATCH -p debug
+#SBATCH -o %j.o
+#SBATCH -e %j.e
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=4
+#SBATCH --time=00:01:00
+#SBATCH -A general
 
 #move to working directory
-cd $PBS_O_WORKDIR
+cd $SLURM_SUBMIT_DIR
 #Call "date" at beginning and end just to get timestamps
 date
 
