@@ -12,30 +12,26 @@ and place it in a queue with others' jobs in order to distribute and execute the
 
 There are several submission/management systems such as [SLURM](https://en.wikipedia.org/wiki/Slurm_Workload_Manager),
 [PBS](https://en.wikipedia.org/wiki/Portable_Batch_System), or the related [TORQUE](https://en.wikipedia.org/wiki/TORQUE).
-Here we will use the last of these, but most are similar enough that learning one
-makes it easy to learn another.
-[TORQUE](https://kb.iu.edu/d/avmy) is [fairly](https://gif.biotech.iastate.edu/torque-pbs-job-management-cheat-sheet)
-common at [universities](http://www.arc.ox.ac.uk/content/torque-job-scheduler).
+Here we will use the first of these, but most are similar enough that learning one
+makes it easy to learn another. [SLURM](https://kb.iu.edu/d/awrz) is used on IU's computing systems.
 Here we will learn by example.
 
-A job is submitted with the `qsub` command, canceled with `qdel`, and the status of a job
-viewed with `qstat`. The flags and configuration options used by TORQUE
+A job is submitted with the `sbatch` command, canceled with `scancel`, and the status of a job
+viewed with `squeue`. The flags and configuration options used by SLURM
 can depend upon the particular computing environment. For example,
 some environments can have multiple queues with different names,
-and the `qsub` command can be used to select one of those particular queues.
+and the submission command can be used to select one of those particular queues.
 
-Options can be passed as flags to the `qsub` command,
+Options can be passed as flags to the `scancel` command,
 but I find it is preferable to instead incorporate them into the beginning
 of a submission shell script using TORQUE's special syntax.
-Lines beginning with `#PBS` contain flags to be passed to the submission system.
+Lines beginning with `#SBATCH` contain flags to be passed to the submission system.
 In this folder we have a trivial shell script called `yell.sh`.
-To facilitate use with TORQUE, we make an additional `submit_yell.sh`
+To facilitate use with SLURM, we make an additional `submit_yell.sh`
 script with the configuration flags followed by the invocation of `yell.sh`
 along with any other commands we wish to execute.
-As you can see, we can tell TORQUE the required resources with `-l`,
-specify a queue with `-q`, pass along locally-declared environment
-variables to the separate shell where the job will be executed with `-V`,
-and so on. There are numerous helpful options, and exploring the above
+As you can see, we can tell SLURM the required resources,
+specify a queue with `-p`, and so on. There are numerous helpful options, and exploring the above
 linked resources is worth your time. For example, you can have an e-mail
 sent to you when the job is completed.
 
